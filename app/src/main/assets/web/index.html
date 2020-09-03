@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>西瓜</title>
+</head>
+<body>
+<div id="container" style="width: 100%;">
+
+    <div class="wraper">
+        <div style="width: 100%"><b id="txtClipboard">剪切板</b></div>
+        <textarea id="cb" style="width: 100%;min-height: 100px;"></textarea>
+        <div style="display: flex;flex-direction: row;width: 100%;">
+            <input id="btCopy" style="flex-grow: 1;margin: 0px;" type="button" value="复制(Ctrl+C)" onclick="copy(this)">
+            <input id="btSend" style="flex-grow: 1;margin: 0px;" type="button" value="发送(Ctrl+;)" onclick="send(this)">
+            <a style="display: none;margin: 0px;" href="http://192.168.1.134:2333/" target="_blank" id="openUrl"></a>
+            <a style="display: none;margin: 0px;" href="http://192.168.1.134:2333/" id="gotoUrl">GotoURL</a>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="wraper">
+        <div style="width: 100%;display: flex;flex-direction: row;justify-content: space-between;">
+            <b id="txtFiles">文件</b>
+            <a id="txtDownloadAll" style="margin: 0px;" onclick="downloadAll()">全部下载(Ctrl+])</a>
+        </div>
+
+        <br>
+
+        <div style="width: 100%;display: flex;flex-direction: row;align-items: stretch;">
+            <input style="padding: 5px;flex-grow: 1;height: 100px;" type="file" name="myUploadFile" id="myUploadFile" onchange="document.getElementById(&#39;submit_button&#39;).disabled=&#39;&#39;" multiple="">
+            <input style="padding: 5px;margin-right: 3px;" type="button" id="submit_button" disabled="" value="上传文件" onclick="DoUpload()">
+        </div>
+        <progress value="0" max="100" id="uploadProgress" style="height: 4px; width: 100%;margin-top: 3px;"></progress>
+        <div id="result" style="width: 100%;"></div>
+
+    </div>
+</div>
+</body>
+</html>
