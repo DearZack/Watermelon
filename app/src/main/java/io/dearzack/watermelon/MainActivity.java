@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         startWatermelon();
         String a = "冲突";
+        String a = "";
     }
 
     @Override
